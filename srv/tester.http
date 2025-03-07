@@ -1,0 +1,36 @@
+###Get service.cds on local host
+http://localhost:4004/odata/v4/my/STUDENTDETAILS
+
+###Create Record
+POST http://localhost:4004/odata/v4/my/STUDENTDETAILS 
+Content-Type: application/json
+
+{
+     "ID": 21,
+      "NAME": "Vishal",
+      "CLASS": 9,
+      "SECTION": "D",
+      "ROLLNO": 24,
+      "RESULTSTATUS": "P"
+}
+
+
+###Delete Record
+DELETE http://localhost:4004/odata/v4/my/STUDENTDETAILS/21
+
+###Update Record
+PATCH  http://localhost:4004/odata/v4/my/STUDENTDETAILS/21
+Content-Type: application/json
+
+{
+      "NAME": "Vishal Ganji"
+}
+
+###Count of records
+http://localhost:4004/odata/v4/my/STUDENTDETAILS/$count
+
+###Top and skip
+http://localhost:4004/odata/v4/my/STUDENTDETAILS?$top=2&$skip=2
+
+###Retrieve meta data
+http://localhost:4004/odata/v4/my/$metadata
